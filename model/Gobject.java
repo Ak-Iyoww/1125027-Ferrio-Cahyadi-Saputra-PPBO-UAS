@@ -1,6 +1,6 @@
 package model;
 
-abstract class Gobject implements KeyValueDetails {
+public abstract class Gobject implements KeyValueDetails {
     private String label;
 
     public Gobject(String label) {

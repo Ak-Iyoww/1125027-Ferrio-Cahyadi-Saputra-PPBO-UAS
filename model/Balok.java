@@ -28,14 +28,24 @@ public class Balok extends Object3D {
         this.lebar = lebar;
     }
 
-
-    @Override
-    public double hitungLuas(){
-        return panjang*lebar;
+    public double getTinggi() {
+        return tinggi;
     }
 
-    public double hitungKeliling(){
-        return 2*(panjang+lebar);
+    public void setTinggi(double tinggi){
+        this.tinggi=tinggi;
+    }
+
+
+
+    @Override
+    public double hitungLuasPermukaan(){
+        return 2*(panjang*lebar+panjang*tinggi+tinggi*lebar);
+    }
+
+    @Override
+    public double hitungVolume(){
+        return panjang*lebar*tinggi;
     }
 
     @Override
@@ -45,9 +55,10 @@ public class Balok extends Object3D {
             parent[0],
             parent[1],
             parent[2],
-            {"tipe", "Segi Empat"},
+            {"tipe", "Balok"},
             {"panjang", String.valueOf(panjang)},
-            {"lebar", String.valueOf(lebar)}
+            {"lebar", String.valueOf(lebar)},
+            {"tinggi", String.valueOf(tinggi)}
         };
     }
 

@@ -1,29 +1,29 @@
-package models;
+package model;
 
-class Lingkaran extends Object2D {
-    private double jariJari;
+public class Lingkaran extends Object2D {
+    private double jarijari;
 
-    public Lingkaran(String label, double jariJari) {
+    public Lingkaran(String label, double jarijari) {
         super(label);
-        this.jariJari = jariJari;
+        this.jarijari = jarijari;
     }
 
-    public double getJariJari() {
-        return jariJari;
+    public double getjarijari() {
+        return jarijari;
     }
 
-    public void setJariJari(double jariJari) {
-        this.jariJari = jariJari;
+    public void setjarijari(double jarijari) {
+        this.jarijari = jarijari;
     }
 
     @Override
     public double hitungLuas() {
-        return Math.PI * jariJari * jariJari;
+        return Math.PI * jarijari * jarijari;
     }
 
     @Override
     public double hitungKeliling() {
-        return 2 * Math.PI * jariJari;
+        return 2 * Math.PI * jarijari;
     }
 
     @Override
@@ -34,7 +34,7 @@ class Lingkaran extends Object2D {
             parent[1],
             parent[2],
             {"tipe", "Lingkaran"},
-            {"jari-jari", String.valueOf(jariJari)}
+            {"jari-jari", String.valueOf(jarijari)}
         };
     }
 }
